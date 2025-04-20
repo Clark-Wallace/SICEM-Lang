@@ -26,7 +26,7 @@ pip install .
 - `slang-session`: Manage handshake sessions (`hang`, `catch`, `status`, `complete`, `expire`)
 - `slang-validate`: Validate the structure of a `.slang` file
 
-Refer to the `docs/` folder for detailed usage examples.
+Refer to the `docs/` folder for detailed usage examples, white papers, manifesto, etc...
 
 ## Development
 ```bash
