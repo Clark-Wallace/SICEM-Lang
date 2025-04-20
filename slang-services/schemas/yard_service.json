@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "YardServiceContext",
+  "type": "object",
+  "properties": {
+    "task": { "type": "string" },
+    "budget": { "type": "number" },
+    "owner_present": { "type": "boolean" },
+    "interaction_level": { "type": "string", "enum": ["minimal", "standard", "full"] }
+  },
+  "required": ["task", "budget", "owner_present", "interaction_level"]
+}

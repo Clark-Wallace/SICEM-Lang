@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CarServiceContext",
+  "type": "object",
+  "properties": {
+    "service": { "type": "string" },
+    "budget": { "type": "number" },
+    "no_wait": { "type": "boolean" },
+    "availability": { "type": "string" }
+  },
+  "required": ["service", "budget", "no_wait", "availability"]
+}

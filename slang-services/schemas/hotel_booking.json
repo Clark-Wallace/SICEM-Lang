@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HotelBookingContext",
+  "type": "object",
+  "properties": {
+    "location": { "type": "string" },
+    "check_in_date": { "type": "string", "format": "date" },
+    "check_out_date": { "type": "string", "format": "date" },
+    "max_price_per_night": { "type": "number" },
+    "room_type": { "type": "string" }
+  },
+  "required": ["location", "check_in_date", "check_out_date", "max_price_per_night", "room_type"]
+}

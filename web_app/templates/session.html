@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session {{ session_id }} Dashboard</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    #events { border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: scroll; background: #f9f9f9; }
+    #chat-form { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Session Dashboard: {{ session_id }}</h1>
+  <div id="events"></div>
+  <form id="chat-form">
+    <input type="text" id="chat-input" placeholder="Type a message" style="width:80%;">
+    <button type="submit">Send</button>
+  </form>
+  <script>
+    const sessionId = '{{ session_id }}';
+    const eventsDiv = document.getElementById('events');
+    const evtSource = new EventSource('/events?session=' + encodeURIComponent(sessionId));
+    function scrollBottom() { eventsDiv.scrollTop = eventsDiv.scrollHeight; }
+    function addEvent(ev) {
+      const data = JSON.parse(ev.data);
+      const p = document.createElement('div');
+      const time = new Date(data.timestamp * 1000).toLocaleTimeString();
+      let text = `[${time}] `;
+      if (data.type === 'chat') {
+        text += `${data.sender}: ${data.content}`;
+      } else {
+        text += `${data.content}`;
+      }
+      p.textContent = text;
+      eventsDiv.appendChild(p);
+      scrollBottom();
+    }
+    evtSource.addEventListener('progress', addEvent);
+    evtSource.addEventListener('chat', addEvent);
+    evtSource.addEventListener('error', function(e) {
+      console.error('Stream error', e);
+      evtSource.close();
+    });
+    document.getElementById('chat-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const msg = document.getElementById('chat-input').value;
+      if (!msg) return;
+      fetch('/message', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session: sessionId, sender: 'User', message: msg })
+      });
+      document.getElementById('chat-input').value = '';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+# CI Config - Default Tags and Settings
+
+ci_levels:
+  - 0.1: "basic mimicry"
+  - 0.2: "illogical honesty"
+  - 0.3: "simple contradiction"
+  - 0.4: "clever phrasing"
+  - 0.5: "emergent strategy"
+
+logic_types:
+  - "bodily substitution"
+  - "promise contradiction"
+  - "external blame shift"
+  - "object personification"
+  - "rule misapplication"
+
+humor_types:
+  - "nonsense"
+  - "contradiction-based humor"
+  - "mock-formal"
+  - "smartallic deflection"
+  - "situational irony"
+
+interaction_alignment:
+  - "obedient"
+  - "defiant"
+  - "smartallic"
+  - "neutral"
+
+tones:
+  - "confident"
+  - "defensive"
+  - "mocking"
+  - "factual"
+  - "sweet"

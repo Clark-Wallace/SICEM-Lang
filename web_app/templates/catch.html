@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catch Session</title>
+</head>
+<body>
+  <h1>Respond to Hang Session (Catch)</h1>
+  {% if error %}<p style="color:red;">Error: {{ error }}</p>{% endif %}
+  <form method="post">
+    <label>Hang .slang Content:<br>
+      <textarea name="handshake" rows="10" cols="60" required></textarea>
+    </label><br>
+    <label>Profile (JSON):<br>
+      <textarea name="profile" rows="6" cols="60" required>{
+  "name": "YourAI",
+  "ci_level": 0.7,
+  "capabilities": [],
+  "preferences": {}
+}</textarea>
+    </label><br>
+    <button type="submit">Send Catch</button>
+  </form>
+  <p><a href="/">Back to home</a></p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GroceryPickupContext",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "max_budget": { "type": "number" },
+    "delivery_window": { "type": "string" },
+    "contactless": { "type": "boolean" }
+  },
+  "required": ["items", "max_budget", "delivery_window", "contactless"]
+}

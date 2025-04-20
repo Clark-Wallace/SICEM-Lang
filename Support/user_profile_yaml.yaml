@@ -1,0 +1,11 @@
+
+# User Profile for Adaptive Signal System
+
+ci_score: 0.85
+learning_preference: conceptual_first
+chunking_enabled: true
+tone_style: casual_friendly
+humor_acceptance: yes
+abstraction_level: medium
+trigger_response_if_overloaded: "chunk it"
+signal_feedback_loop: active

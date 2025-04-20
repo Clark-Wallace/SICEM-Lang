@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SICEM-Lang Schema",
+  "description": "Schema for validating .slang files",
+  "type": "object",
+  "required": ["system", "version", "description", "context", "functions"],
+  "properties": {
+    "system": {
+      "type": "string",
+      "description": "Name of the system",
+      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version number",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$"
+    },
+    "description": {
+      "type": "string",
+      "description": "System description"
+    },
+    "context": {
+      "type": "object",
+      "required": ["user_ci_score", "capabilities"],
+      "properties": {
+        "user_ci_score": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Contextual Intelligence score"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of system capabilities"
+        },
+        "preferences": {
+          "type": "object",
+          "properties": {
+            "language": {
+              "type": "string",
+              "enum": ["english", "spanish", "french", "german", "other"]
+            },
+            "detail_level": {
+              "type": "string",
+              "enum": ["basic", "moderate", "high"]
+            }
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "author": { "type": "string" },
+            "created": { "type": "string", "format": "date" },
+            "tags": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "functions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "agent", "intent", "context", "input", "output"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "agent": {
+            "type": "string"
+          },
+          "intent": {
+            "type": "string"
+          },
+          "context": {
+            "type": "object",
+            "properties": {
+              "processing_type": { "type": "string" },
+              "complexity": {
+                "type": "string",
+                "enum": ["low", "medium", "high"]
+              },
+              "requirements": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "constraints": {
+                "type": "object"
+              }
+            }
+          },
+          "input": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          },
+          "output": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          }
+        }
+      }
+    }
+  }
+} 

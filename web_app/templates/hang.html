@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hang Session</title>
+</head>
+<body>
+  <h1>Initiate Hang Session</h1>
+  {% if error %}<p style="color:red;">Error: {{ error }}</p>{% endif %}
+  <form method="post">
+    <label>Source AI: <input type="text" name="source" required></label><br>
+    <label>Target AI: <input type="text" name="target" required></label><br>
+    <label>Payload (JSON):<br>
+      <textarea name="payload" rows="6" cols="60" required>{}</textarea>
+    </label><br>
+    <button type="submit">Send Hang</button>
+  </form>
+  <p><a href="/">Back to home</a></p>
+</body>
+</html>
