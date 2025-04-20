@@ -1,6 +1,6 @@
 # SICEM-Lang "Slang"
 
-A Context Intelligence (CI) aware toolkit and CLI for exchanging `.slang` files between AIs, with support for session-based handshakes (`hang`/`catch`), content adaptation, and versatile signal communications.
+A Context Intelligence (CI) aware language toolkit and CLI for exchanging `.slang` files between AIs, with support for session-based handshakes (`hang`/`catch`), content adaptation, and versatile signal communications.
 
 ## Features
 - Parse and generate `.slang` files
