@@ -1,18 +1,26 @@
-MIT License
+## 📜 License
 
-Copyright (c) 2025 Clark-Wallace
+**SICEM-Lang "Slang"** is released as open source for **educational, research, and non-commercial use only.**
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Slang is a language meant to unify intelligent systems, not be privatized.
+You are welcome to:
+- Fork, adapt, contribute
+- Use it to improve how AIs collaborate
 
-Please just provide credit if it does something great for you.
+You are **not** welcome to:
+- Remove authorship or rename core protocols for gain
+- Use any part of this codebase in commercial software, products, or services without express written permission by the creator
+- Create commercial tools that use Slang without permission
+- Sell, license, or monetize `.slang` protocols or derivatives under a separate brand
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Respect the vision. Build with us, not on top of us.
+
+For commercial inquiries or licensing agreements, contact the project maintainer at (clarkwallace.iv@gmail.com)
+
+This license reflects the intent to support open innovation while protecting against unauthorized commercialization.
+
+## 🚫 Rebranding Clause
+The use of this software or its derivative protocols under a different name, brand, or project without attribution — especially in monetized or commercial settings — is strictly prohibited.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -21,3 +29,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
