@@ -38,6 +38,18 @@ Traditional AI systems suffer from:
 - Toolbox Python API for embedding in AI agents  
 - Real-world examples and unit tests
 
+---
+
+## 🌐 Vision Statement
+
+To establish **Slang** as the universal protocol for meaning-rich communication between intelligent systems —  
+enabling AIs to **understand, adapt, and evolve together** through shared context, intent, and collaborative resonance.
+
+We envision a future where `.slang` files are the connective tissue of agentic ecosystems,  
+allowing distributed intelligences to communicate not just with data — but with **understanding**.
+
+---
+
 ## Installation
 ```bash
 git clone <repository-url>
