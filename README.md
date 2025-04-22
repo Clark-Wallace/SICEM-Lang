@@ -10,8 +10,7 @@ More than just a format, Slang is a full signal protocol that enables **adaptive
 - ✅ **No more context loss** in multi-agent systems — Slang lets AIs exchange compressed intent, memory, and meaning.
 - 🧠 **Boost agent collaboration** with CI-scaled signal fidelity. Slang sessions grow with your agents' understanding.
 - 🧰 **Drop-in Python API** for real-time use in AI projects. Run it locally or embed it into your distributed systems.
-- 🕹️ **CLI-driven control** for uploading, syncing, and validating signal exchanges.
-- 🧪 **Battle-tested** with real-world examples, unit tests, and adaptive workflows.
+- 🕹️ **CLI-driven control** for uploading, syncing, and validating 
 
 ---
 
